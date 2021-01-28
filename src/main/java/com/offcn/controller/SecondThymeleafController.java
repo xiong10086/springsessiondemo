@@ -14,6 +14,34 @@ import java.util.Map;
 public class SecondThymeleafController {
 
     /**
+     * 访问localhost:8080/ 页面
+     * 将数据message填充到templates/index4.html
+     * @param model
+     * @return
+     */
+    @GetMapping("/five")
+    public String five(Model model) {
+
+        model.addAttribute("flag", "yes");
+        model.addAttribute("menu", "admin");
+        model.addAttribute("manager", "manager");
+        return "index5";
+    }
+
+    /**
+     * 访问localhost:8080/java003 页面
+     * 将数据message填充到templates/index4.html
+     * @param model
+     * @return
+     */
+    @GetMapping("/four")
+    public String four(Model model){
+        model.addAttribute("userName","优就业");
+        model.addAttribute("href","http://www.ujiuye.com");
+        return "index4";
+    }
+
+    /**
      * 访问localhost:8080/java003 页面
      * 将数据message填充到templates/index3.html
      * @param model
