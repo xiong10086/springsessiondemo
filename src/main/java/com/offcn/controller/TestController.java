@@ -10,6 +10,7 @@ public class TestController {
 
     @GetMapping("/set")
     public String setSession(HttpSession session){
+        System.out.println("abcd");
         session.setAttribute("msg","Hello");
         return "ok";
     }
